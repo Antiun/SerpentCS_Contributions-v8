@@ -2,8 +2,9 @@
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    Copyright (C) 2012-Today Serpent Consulting Services Pvt. Ltd.
-#    (<http://www.serpentcs.com>)
+#    Copyright (C) 2004-2010 OpenERP SA (<http://www.openerp.com>)
+#    Copyright (C) 2011-2015 Serpent Consulting Services Pvt. Ltd.
+#    (<http://www.serpentcs.com>).
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -20,7 +21,21 @@
 #
 ##############################################################################
 
-from . import base_module_record
-from . import wizard
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
+{
+    "name" : "Web Widget Multi Image V8",
+    "version" : "1.0",
+    "author" : "Serpent Consulting Services Pvt. Ltd.",
+    "category": 'Image',
+    'complexity': "easy",
+    'depends': ['product'],
+    "description": """
+    """,
+    'data': [
+        'view/templates.xml',
+        'view/product_view.xml',
+        ],
+    'website': 'http://www.serpentcs.com',
+    'qweb': ['static/src/xml/image_multi.xml'],
+    'installable': True,
+    'auto_install': False,
+}

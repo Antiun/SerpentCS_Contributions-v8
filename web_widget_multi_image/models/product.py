@@ -2,8 +2,9 @@
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    Copyright (C) 2012-Today Serpent Consulting Services Pvt. Ltd.
-#    (<http://www.serpentcs.com>)
+#    Copyright (C) 2004-2010 OpenERP SA (<http://www.openerp.com>)
+#    Copyright (C) 2011-2015 Serpent Consulting Services Pvt. Ltd.
+#    (<http://www.serpentcs.com>).
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -20,7 +21,12 @@
 #
 ##############################################################################
 
-from . import base_module_record
-from . import wizard
+from openerp.osv import osv, fields
 
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
+
+class product_template(osv.osv):
+    _inherit = "product.template"
+
+    _columns = {
+        'multi_images': fields.char('Multi Images'),
+    }
